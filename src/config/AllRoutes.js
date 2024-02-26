@@ -1,55 +1,34 @@
-import { BrowserRouter } from "react-router-dom";
-import { useState } from "react";
-import { CssBaseline, Box, Container } from "@mui/material";
-import { teal } from "@mui/material/colors";
-import QuestionCard from "../questions/QuestionCard";
-import Result from "../questions/Result";
-import questions from "../data/questions";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "../layout/Layout";
+import Home from "../home/Home"
+import MillionaireGame from "../quiz/MillionaireGame";
+import Dashboard from "../dashboard/Dashboard";
+import About from "../about/About";
+import Faq from "../faq/Faq";
+
+
+
 
 
 
 const AllRoutes = () => {
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [answers, setAnswers] = useState([]);
-    const finishedQuiz = currentQuestionIndex === questions.length;
-    const currentQuestion = questions[currentQuestionIndex];
-
-    const goToNext = () => {
-        setCurrentQuestionIndex((prevState) => prevState + 1);
-    }
-
-    const submitAnswer = (value) => {
-        setAnswers((prevState) => [...prevState, value]);
-        goToNext();
-    }
-
-    const restartQuiz = () => {
-        setCurrentQuestionIndex(0);
-        setAnswers([]);
-    }
+   
 
     return (
 
 
         <BrowserRouter>
             <Layout>
+            <Routes>
+            <Route  path="/" element={<Home />} />
+            <Route path='/millionaire-game' element={<MillionaireGame/>}/>
+            <Route path='/dashboard' element={<Dashboard/>}/>
+            <Route path='/about' element={<About/>}/>
+            <Route path='/faq' element={<Faq/>}/>
 
-                <div>
-                    <CssBaseline />
+                </Routes>
 
-                    <Box sx={{
-                        backgroundColor: teal[500],
-                        height: "100vh", display: "flex", alignItems: "center"
-                    }}>
-
-                        <Container maxWidth="sm">
-                            {finishedQuiz ? <Result restartQuiz={restartQuiz} answers={answers} /> : <QuestionCard question={currentQuestion} questionNumber={currentQuestionIndex + 1}
-                                submitAnswer={submitAnswer} />}
-
-                        </Container>
-                    </Box>
-                </div>
+                
             </Layout>
         </BrowserRouter>
 
