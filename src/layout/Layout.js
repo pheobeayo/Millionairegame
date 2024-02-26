@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 const Layout = ({ children }) => {
   return (
     <div className='relative'>
-       <header className='w-full bg-[#1A1818]'>
+       <header className='w-full bg-[#008080]'>
        <Header/>
        </header>
       <div>

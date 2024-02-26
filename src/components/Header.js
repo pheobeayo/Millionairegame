@@ -17,7 +17,7 @@ const Header = () => {
                    
                 <Link to="/"><img src={logo} alt="logo" class='w-20' /></Link>
                     <ul className='flex m-auto gap-20'>
-                        <Link to='/explore' style={{ textDecoration: 'none', color: 'white' }}>Explore</Link>
+                        <Link to='/millionaire-game' style={{ textDecoration: 'none', color: 'white' }}>Game</Link>
                         <Link to='/dashboard' style={{ textDecoration: 'none', color: 'white' }}>Dashboard</Link>
                         <Link to='/about' style={{ textDecoration: 'none', color: 'white' }}>About us </Link>
                         <Link style={{ textDecoration: 'none', color: 'white' }}>FAQs</Link>
