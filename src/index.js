@@ -18,8 +18,8 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 
 const config = getDefaultConfig({
-  appName: 'RainbowKit demo',
-  projectId: 'YOUR_PROJECT_ID',
+  appName: 'millionairegame',
+  projectId: '8e25a970b249243c7e5ceb04abe3a659',
   chains: [
     mainnet,
     polygon,
