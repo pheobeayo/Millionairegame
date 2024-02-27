@@ -11,7 +11,7 @@ const Footer = () => {
       </p>
       <div className="flex space-x-4 justify-center items-center font-semibold text-lg">
         <FiGlobe />
-        <p>English (US)</p>
+        <p className="text-white">English (US)</p>
       </div>
     </div>
   )

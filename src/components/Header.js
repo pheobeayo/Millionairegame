@@ -23,7 +23,7 @@ const Header = () => {
                         <Link style={{ textDecoration: 'none', color: 'white' }}>FAQs</Link>
                     </ul>
                     <div class='mx-4 '>
-                        <ConnectButton  label="Sign in" />
+                        <ConnectButton/>
                     </div>
                     
                 </div>
